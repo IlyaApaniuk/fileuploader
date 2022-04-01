@@ -1,0 +1,9 @@
+.filesWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

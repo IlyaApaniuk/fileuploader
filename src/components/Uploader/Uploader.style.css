@@ -1,0 +1,19 @@
+.uploaderWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.uploadButton {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.spinner {
+    color: #ffffff;
+}
+
+.ms-Button-flexContainer {
+    min-width: 100px;
+}

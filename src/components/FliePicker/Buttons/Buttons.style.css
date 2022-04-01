@@ -1,0 +1,14 @@
+.buttonsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    font-size: 16px;
+}
+
+.button:last-child {
+    margin-left: 20px;
+}

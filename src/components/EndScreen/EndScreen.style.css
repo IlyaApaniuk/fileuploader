@@ -1,0 +1,25 @@
+.endScreenWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@keyframes rollout {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+.rollOut {
+    animation: rollout 0.4s;
+}

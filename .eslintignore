@@ -1,0 +1,7 @@
+*.d.ts
+*.test.tsx
+.eslintrc.js
+serviceWorker.ts
+build/*
+!build/index.js
+generated

@@ -1,0 +1,9 @@
+.errorMessage {
+    display: block;
+    font-size: 16px;
+    color: #ff0000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
