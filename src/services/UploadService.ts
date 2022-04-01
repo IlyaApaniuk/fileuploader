@@ -15,9 +15,9 @@ class UploadService {
 
     private readonly tenantName: string = "85458q";
 
-    private readonly clientId: string = "793e6828-b07d-443b-ac8a-be49bfd32388";
+    private readonly clientId: string = "c525257f-aaa1-49dd-a65e-aa2830c761cf";
 
-    private readonly clientSecret: string = "B2ZRidv1a73idJU44NvvWPWuVRWwNBA9wigB5mS0szc=";
+    private readonly clientSecret: string = "CAKwcFTqe980ANh5AqU78en154Wlo4hFlCnyN6XWBz4=";
 
     constructor() {
         this.token = "";
@@ -89,7 +89,9 @@ class UploadService {
 
             const options: RequestInit = {
                 method: "POST",
+                mode: "no-cors",
                 headers: {
+                    Accept: "application/json",
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
                 body
