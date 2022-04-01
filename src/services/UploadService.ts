@@ -90,6 +90,7 @@ class UploadService {
             const options: RequestInit = {
                 method: "POST",
                 headers: {
+                    "Access-Control-Allow-Origin": "*",
                     Accept: "application/json",
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
