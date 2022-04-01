@@ -90,14 +90,13 @@ class UploadService {
             const options: RequestInit = {
                 method: "POST",
                 headers: {
-                    "Access-Control-Allow-Origin": "*",
                     Accept: "application/json",
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
                 body
             };
 
-            const response = await fetch(`https://cors-anywhere.herokuapp.com/https://accounts.accesscontrol.windows.net/${this.tenantId}/tokens/OAuth/2`, options);
+            const response = await fetch(`https://accounts.accesscontrol.windows.net/${this.tenantId}/tokens/OAuth/2`, options);
             const auth = await response.json();
 
             this.token = auth.access_token;
