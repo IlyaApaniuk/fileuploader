@@ -112,7 +112,7 @@ class UploadService {
                 body
             };
 
-            const response = await fetch(`https://accounts.accesscontrol.windows.net/${this.tenantId}/tokens/OAuth/2`, options);
+            const response = await fetch(`https://proxy-file-uploader.herokuapp.com/https://accounts.accesscontrol.windows.net/${this.tenantId}/tokens/OAuth/2`, options);
             const auth = await response.json();
 
             this.token = auth.access_token;
