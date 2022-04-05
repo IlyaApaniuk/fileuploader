@@ -7,33 +7,33 @@ class UploadService {
 
     private token: string;
 
-    // private readonly absoluteUrl: string = "https://85458q.sharepoint.com/sites/dev";
-
-    // private readonly documentLibraryTitle: string = "Documents";
-
-    // private readonly folderName: string = "Secure File Upload";
-
-    // private readonly tenantId: string = "19e59194-a213-4d26-8ec1-56db95ec718e";
-
-    // private readonly tenantName: string = "85458q";
-
-    // private readonly clientId: string = "c525257f-aaa1-49dd-a65e-aa2830c761cf";
-
-    // private readonly clientSecret: string = "CAKwcFTqe980ANh5AqU78en154Wlo4hFlCnyN6XWBz4=";
-
-    private readonly absoluteUrl: string = "https://haunnlanders.sharepoint.com/sites/SecureFileUpload";
+    private readonly absoluteUrl: string = "https://85458q.sharepoint.com/sites/dev";
 
     private readonly documentLibraryTitle: string = "Documents";
 
     private readonly folderName: string = "Secure File Upload";
 
-    private readonly tenantId: string = "724aa014-bc2a-408b-91c2-c480d5558ebf";
+    private readonly tenantId: string = "19e59194-a213-4d26-8ec1-56db95ec718e";
 
-    private readonly tenantName: string = "haunnlanders";
+    private readonly tenantName: string = "85458q";
 
-    private readonly clientId: string = "9fe8a720-f783-44be-b5c2-6c496b05e80f";
+    private readonly clientId: string = "c525257f-aaa1-49dd-a65e-aa2830c761cf";
 
-    private readonly clientSecret: string = "BNmj/cx05czcH+sAk1bnFJNr31h2GON+cRiV2o2b/d0=";
+    private readonly clientSecret: string = "CAKwcFTqe980ANh5AqU78en154Wlo4hFlCnyN6XWBz4=";
+
+    // private readonly absoluteUrl: string = "https://haunnlanders.sharepoint.com/sites/SecureFileUpload";
+
+    // private readonly documentLibraryTitle: string = "Documents";
+
+    // private readonly folderName: string = "Secure File Upload";
+
+    // private readonly tenantId: string = "724aa014-bc2a-408b-91c2-c480d5558ebf";
+
+    // private readonly tenantName: string = "haunnlanders";
+
+    // private readonly clientId: string = "9fe8a720-f783-44be-b5c2-6c496b05e80f";
+
+    // private readonly clientSecret: string = "BNmj/cx05czcH+sAk1bnFJNr31h2GON+cRiV2o2b/d0=";
 
     constructor() {
         this.token = "";
