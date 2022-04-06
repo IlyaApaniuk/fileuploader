@@ -8,6 +8,7 @@ import uploadService from "../../services/UploadService";
 import FilePicker from "../FliePicker/Picker/FilePicker";
 import Header from "../Header/Header";
 import EndScreen from "../EndScreen/EndScreen";
+import PageHeader from "../PageHeader/PageHeader";
 
 import "./Uploader.style.css";
 
@@ -38,14 +39,17 @@ const Uploader: React.FC<IUploaderProps> = ({ headerText, subHeaderText, endScen
 
     return (
         <div className="uploaderWrapper">
-            <Header headerText={headerText} subHeaderText={subHeaderText} />
-            <FilePicker files={files} setFiles={setFiles} clearUploads={() => setStatus(UploadStatus.Pending)} />
-            {files.length > 0 && (
-                <PrimaryButton className="uploadButton" disabled={status === UploadStatus.Uploading || status === UploadStatus.Uploaded} onClick={() => uploadFiles()}>
-                    {status === UploadStatus.Uploading ? <Spinner className="spinner" size={SpinnerSize.medium} /> : "Upload file(s)"}
-                </PrimaryButton>
-            )}
-            {status === UploadStatus.Uploaded && <EndScreen headerText={endSceneHeaderText} subHeaderText={endSceneSubHeaderText} />}
+            <PageHeader />
+            <div className="mainSection">
+                <Header headerText={headerText} subHeaderText={subHeaderText} />
+                <FilePicker files={files} setFiles={setFiles} clearUploads={() => setStatus(UploadStatus.Pending)} />
+                {files.length > 0 && (
+                    <PrimaryButton className="uploadButton" disabled={status === UploadStatus.Uploading || status === UploadStatus.Uploaded} onClick={() => uploadFiles()}>
+                        {status === UploadStatus.Uploading ? <Spinner className="spinner" size={SpinnerSize.medium} /> : "Upload file(s)"}
+                    </PrimaryButton>
+                )}
+                {status === UploadStatus.Uploaded && <EndScreen headerText={endSceneHeaderText} subHeaderText={endSceneSubHeaderText} />}
+            </div>
         </div>
     );
 };

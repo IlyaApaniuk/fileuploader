@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
+    padding-top: 20px;
 }
 
 .text {

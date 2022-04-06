@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    font-family: "Roboto Condensed",sans-serif;
+    line-height: 1.7;
+}
+
 .uploaderWrapper {
     display: flex;
     flex-direction: column;
@@ -5,9 +11,26 @@
     align-items: center;
 }
 
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 60px;
+}
+
 .uploadButton {
     font-size: 16px;
-    margin-bottom: 10px;
+    font-family: "Roboto Condensed",sans-serif;
+    background-color: #023373;
+    border-radius: 8px;
+    padding: 20px 15px;
+    color: #ffffff;
+}
+
+.uploadButton:hover {
+    background-color: #023373;
+    color: #ffffff;
 }
 
 .spinner {

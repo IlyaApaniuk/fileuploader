@@ -1,0 +1,15 @@
+.pageHeaderWrapper {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.innerHeaderWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    width: 88%;
+    margin: 0 auto;
+    min-height: 120px;
+}
