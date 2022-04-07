@@ -47,3 +47,15 @@ body {
 .ms-Button-flexContainer {
     min-width: 100px;
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .mainSection {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainSection {
+        padding: 0 10px;
+    }
+}
