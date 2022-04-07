@@ -13,11 +13,12 @@ import "./FilePicker.style.css";
 
 export interface IFilePickerProps {
     files: IFile[];
+    status: UploadStatus;
     setFiles: (files: IFile[]) => void;
     clearUploads: () => void;
 }
 
-const FilePicker: React.FC<IFilePickerProps> = ({ files, setFiles, clearUploads }) => {
+const FilePicker: React.FC<IFilePickerProps> = ({ files, status, setFiles, clearUploads }) => {
     const [openFileSelector, { plainFiles, loading, errors, clear }] = useFilePicker({
         accept: extensions,
         multiple: true,
@@ -27,16 +28,21 @@ const FilePicker: React.FC<IFilePickerProps> = ({ files, setFiles, clearUploads 
     const clearUploadsHandler = () => {
         clearUploads();
         clear();
+        setFiles([]);
     };
 
     React.useEffect(() => {
-        setFiles(plainFiles.map(file => ({ file, status: UploadStatus.Pending })));
-        clearUploads();
+        if (status === UploadStatus.Uploaded) {
+            setFiles(plainFiles.map(file => ({ file, status: UploadStatus.Pending })));
+            clearUploads();
+        } else {
+            setFiles([...files, ...plainFiles.map(file => ({ file, status: UploadStatus.Pending }))]);
+        }
     }, [plainFiles, setFiles]);
 
     return (
         <div className="filePickerWrapper">
-            <Buttons openFileSelector={openFileSelector} clear={clearUploadsHandler} />
+            <Buttons openFileSelector={openFileSelector} clear={clearUploadsHandler} status={status} />
             {loading ? <Spinner size={SpinnerSize.large} /> : <Files files={files} />}
             <Errors errors={errors} />
         </div>

@@ -35,6 +35,16 @@ body {
     color: #ffffff;
 }
 
+.uploadButton.is-disabled {
+    background-color: #f3f3f3;
+    color: #000000;
+}
+
+.uploadButton.is-disabled:hover {
+    background-color: #f3f3f3;
+    color: #000000;
+}
+
 .uploadButton:hover {
     background-color: #023373;
     color: #ffffff;

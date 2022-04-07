@@ -14,6 +14,16 @@
     color: #ffffff;
 }
 
+.button.is-disabled {
+    background-color: #f3f3f3;
+    color: #000000;
+}
+
+.button.is-disabled:hover {
+    background-color: #f3f3f3;
+    color: #000000;
+}
+
 .button:hover {
     background-color: #023373;
     color: #ffffff;

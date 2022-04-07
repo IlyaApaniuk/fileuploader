@@ -135,7 +135,7 @@ class UploadService {
     }
 
     private libraryUrlBuiler(fileName: string): string {
-        return `${this.absoluteUrl}/_api/Web/Lists/getByTitle('${this.documentLibraryTitle}')/RootFolder/Folders('${this.folderName}')/Files/Add(url='${fileName}', overwrite=false)`;
+        return `${this.absoluteUrl}/_api/Web/Lists/getByTitle('${this.documentLibraryTitle}')/RootFolder/Folders('${this.folderName}')/Files/Add(url='${fileName}', overwrite=true)`;
     }
 }
 

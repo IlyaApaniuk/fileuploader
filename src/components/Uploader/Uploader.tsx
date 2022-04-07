@@ -59,7 +59,7 @@ const Uploader: React.FC<IUploaderProps> = ({ appName, headerText, endSceneHeade
             <h1 className="appName">{appName}</h1>
             <div className="mainSection">
                 <Header headerText={headerText} />
-                <FilePicker files={files} setFiles={setFiles} clearUploads={() => setStatus(UploadStatus.Pending)} />
+                <FilePicker files={files} status={status} setFiles={setFiles} clearUploads={() => setStatus(UploadStatus.Pending)} />
                 {files.length > 0 && (
                     <PrimaryButton className="uploadButton" disabled={status === UploadStatus.Uploading || status === UploadStatus.Uploaded} onClick={() => uploadFiles()}>
                         {status === UploadStatus.Uploading ? <Spinner className="spinner" size={SpinnerSize.medium} /> : "Upload file(s)"}
