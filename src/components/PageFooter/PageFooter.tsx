@@ -19,7 +19,7 @@ const PageFooter: React.FC<IPageFooterProps> = ({ footerText }) => {
     return (
         <div className="pageFooterWrapper">
             <div className="innerFooterWrapper">
-                <img className="logo" src="./logo.png" alt="Haunn Landers & Co." width={250} height={87} />
+                <img className="logo" src="./logo.png" alt="Haunn Landers & Co." width={250} height={77} />
                 <div className="infoWrapper">
                     <div className="head">{footerText.office.name}</div>
                     {footerText.office.description.split("|").map(text => (
