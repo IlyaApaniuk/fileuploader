@@ -3,15 +3,21 @@ import * as React from "react";
 import "./Header.style.css";
 
 export interface IHeaderProps {
-    headerText: string;
-    subHeaderText: string;
+    headerText: {
+        welcome: string;
+        firstPart: string;
+        secondPart: string;
+        thanks: string;
+    };
 }
 
-const Header: React.FC<IHeaderProps> = ({ headerText, subHeaderText }) => {
+const Header: React.FC<IHeaderProps> = ({ headerText }) => {
     return (
         <div className="headerWrapper">
-            <div className="text">{headerText}</div>
-            <div className="text">{subHeaderText}</div>
+            <div className="text">{headerText.welcome}</div>
+            <div className="text">{headerText.firstPart}</div>
+            <div className="text">{headerText.secondPart}</div>
+            <div className="text">{headerText.thanks}</div>
         </div>
     );
 };

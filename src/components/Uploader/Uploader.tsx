@@ -9,17 +9,33 @@ import FilePicker from "../FliePicker/Picker/FilePicker";
 import Header from "../Header/Header";
 import EndScreen from "../EndScreen/EndScreen";
 import PageHeader from "../PageHeader/PageHeader";
+import PageFooter from "../PageFooter/PageFooter";
 
 import "./Uploader.style.css";
 
 export interface IUploaderProps {
-    headerText: string;
-    subHeaderText: string;
+    appName: string;
+    headerText: {
+        welcome: string;
+        firstPart: string;
+        secondPart: string;
+        thanks: string;
+    };
     endSceneHeaderText: string;
     endSceneSubHeaderText: string;
+    footerText: {
+        office: {
+            name: string;
+            description: string;
+        };
+        contacts: {
+            name: string;
+            numbers: { number: string; text: string }[];
+        };
+    };
 }
 
-const Uploader: React.FC<IUploaderProps> = ({ headerText, subHeaderText, endSceneHeaderText, endSceneSubHeaderText }) => {
+const Uploader: React.FC<IUploaderProps> = ({ appName, headerText, endSceneHeaderText, endSceneSubHeaderText, footerText }) => {
     const [files, setFiles] = React.useState<IFile[]>([]);
     const [status, setStatus] = React.useState<UploadStatus>(UploadStatus.Pending);
 
@@ -40,8 +56,9 @@ const Uploader: React.FC<IUploaderProps> = ({ headerText, subHeaderText, endScen
     return (
         <div className="uploaderWrapper">
             <PageHeader />
+            <h1 className="appName">{appName}</h1>
             <div className="mainSection">
-                <Header headerText={headerText} subHeaderText={subHeaderText} />
+                <Header headerText={headerText} />
                 <FilePicker files={files} setFiles={setFiles} clearUploads={() => setStatus(UploadStatus.Pending)} />
                 {files.length > 0 && (
                     <PrimaryButton className="uploadButton" disabled={status === UploadStatus.Uploading || status === UploadStatus.Uploaded} onClick={() => uploadFiles()}>
@@ -50,6 +67,7 @@ const Uploader: React.FC<IUploaderProps> = ({ headerText, subHeaderText, endScen
                 )}
                 {status === UploadStatus.Uploaded && <EndScreen headerText={endSceneHeaderText} subHeaderText={endSceneSubHeaderText} />}
             </div>
+            <PageFooter footerText={footerText} />
         </div>
     );
 };

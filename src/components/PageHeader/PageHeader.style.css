@@ -6,7 +6,7 @@
 .innerHeaderWrapper {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     width: 88%;
