@@ -2,6 +2,9 @@ body {
     margin: 0;
     font-family: "Roboto Condensed",sans-serif;
     line-height: 1.7;
+    font-style: normal;
+    color: #161616;
+    letter-spacing: .01em;
 }
 
 .uploaderWrapper {
