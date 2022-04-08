@@ -2,15 +2,17 @@ import * as React from "react";
 
 import "./PageHeader.style.css";
 
-const PageHeader: React.FC = () => {
+export interface IPageHeaderProps {
+    appName: string;
+}
+
+const PageHeader: React.FC<IPageHeaderProps> = ({ appName }) => {
     return (
-        <div className="pageHeaderWrapper">
+        <header className="pageHeaderWrapper">
             <div className="innerHeaderWrapper">
-                <a href="https://haunnlanders.ca/" style={{ outline: "none" }}>
-                    <img src="./logo.png" alt="Haunn Landers & Co." width={270} height={84} />
-                </a>
+                <h1 className="appName">{appName}</h1>
             </div>
-        </div>
+        </header>
     );
 };
 

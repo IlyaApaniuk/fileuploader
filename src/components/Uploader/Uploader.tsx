@@ -55,8 +55,7 @@ const Uploader: React.FC<IUploaderProps> = ({ appName, headerText, endSceneHeade
 
     return (
         <div className="uploaderWrapper">
-            <PageHeader />
-            <h1 className="appName">{appName}</h1>
+            <PageHeader appName={appName} />
             <div className="mainSection">
                 <Header headerText={headerText} />
                 <FilePicker files={files} status={status} setFiles={setFiles} clearUploads={() => setStatus(UploadStatus.Pending)} />

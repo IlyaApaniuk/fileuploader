@@ -17,7 +17,7 @@ export interface IPageFooterProps {
 
 const PageFooter: React.FC<IPageFooterProps> = ({ footerText }) => {
     return (
-        <div className="pageFooterWrapper">
+        <footer className="pageFooterWrapper">
             <div className="innerFooterWrapper">
                 <img className="logo" src="./logo.png" alt="Haunn Landers & Co." width={250} height={77} />
                 <div className="infoWrapper">
@@ -35,7 +35,7 @@ const PageFooter: React.FC<IPageFooterProps> = ({ footerText }) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

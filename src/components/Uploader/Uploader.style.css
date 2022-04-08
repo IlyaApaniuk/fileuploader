@@ -1,3 +1,11 @@
+html {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: "Roboto Condensed",sans-serif;
@@ -5,6 +13,7 @@ body {
     font-style: normal;
     color: #161616;
     letter-spacing: .01em;
+    height: 100%;
 }
 
 .uploaderWrapper {
@@ -12,21 +21,17 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-}
-
-.appName {
-    font-weight: 700;
-    font-size: 24px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    height: 100%;
 }
 
 .mainSection {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 0 120px;
+    height: 100%;
 }
 
 .uploadButton {

@@ -13,3 +13,8 @@
     margin: 0 auto;
     min-height: 120px;
 }
+
+.appName {
+    font-weight: 700;
+    font-size: 24px;
+}
